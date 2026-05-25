@@ -1,0 +1,6 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/src-CoVEehNY.js","assets/index-DZLe68mz.js","assets/index-1LZvqndn.css"])))=>i.map(i=>d[i]);
+import{s as e,t}from"./index-DZLe68mz.js";var n=null;async function r(){return n||=await t(()=>import(`./src-CoVEehNY.js`).then(t=>e(t.default,1)),__vite__mapDeps([0,1,2])),n}async function i(e,t,n){let i=await(await r()).createWorker(`chi_sim+eng`,1,{logger:e=>{n&&e.status===`recognizing text`&&n(Math.round(e.progress*100))}});try{return await i.setParameters({tessedit_pageseg_mode:t.psm,tessedit_ocr_engine_mode:1}),(await i.recognize(e)).data.text}finally{await i.terminate()}}function a(e){return e.split(`
+`).map(e=>e.trim()).join(`
+`).replace(/\n{3,}/g,`
+
+`).replace(/([一-鿿㐀-䶿])\s+([一-鿿㐀-䶿])/g,`$1$2`).replace(/([一-鿿㐀-䶿])\s+([，。！？、；：""''）】》])/g,`$1$2`).replace(/([（【《])\s+([一-鿿㐀-䶿])/g,`$1$2`).trim()}async function o(e,t){try{let n=a(await i(e,{psm:6},t));if(n.length>10)return n}catch{}try{let n=a(await i(e,{psm:3},t));if(n.length>5)return n}catch{}try{return a(await i(e,{psm:4},t))}catch{return``}}export{o as recognizeText};

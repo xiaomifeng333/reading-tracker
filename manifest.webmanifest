@@ -1,0 +1,1 @@
+{"name":"读书打卡","short_name":"读书打卡","description":"记录阅读日常与读书笔记","start_url":"/reading-tracker/","display":"standalone","background_color":"#B8E4F0","theme_color":"#B8E4F0","lang":"en","scope":"/reading-tracker/","icons":[{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
